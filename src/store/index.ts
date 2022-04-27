@@ -1,1 +1,1 @@
-import 
+import { createPinia } from 'pinia'

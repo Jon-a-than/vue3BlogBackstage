@@ -6,7 +6,7 @@ const routes = [
     path: '/',
     redirect: '/home'
   },
-  Login
+  ...Login
 ]
 
 export const router = createRouter({
