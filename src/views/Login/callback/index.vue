@@ -2,7 +2,10 @@
 import { router } from '@/router'
 import { ApiGet } from '@/utils/request'
 import { ElMessage, ElLoading } from 'element-plus'
-import { onMounted } from 'vue';
+import { onMounted } from 'vue'
+import { useUserStore } from '@/store'
+
+const userStore = useUserStore()
 
 onMounted(async () => {
   const loading = ElLoading.service({
@@ -17,6 +20,12 @@ onMounted(async () => {
 
   if (res.statusCode === 2000) {
     ElMessage.success('欢迎回家φ(゜▽゜*)♪')
+    userStore.$state = {
+      login: res.data.login,
+      id: res.data.id,
+      token: res.data.token,
+      avatar_url: res.data.avatar_url
+    }
     loading.close()
     router.push({ path: '/home' })
   }
@@ -28,6 +37,5 @@ onMounted(async () => {
     }, 2000)
   }
 })
-
 
 </script>
