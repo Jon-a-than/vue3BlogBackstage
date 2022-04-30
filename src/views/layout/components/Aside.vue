@@ -1,0 +1,55 @@
+<script lang="ts" setup>
+import {
+  Document,
+  Menu as IconMenu,
+  Location,
+  Setting,
+} from '@element-plus/icons-vue'
+</script>
+
+<template>
+  <el-col>
+    <el-menu :router="true" :default-active="$route.path" class="el-menu-vertical-demo">
+      <el-menu-item index="/home">
+        <el-icon>
+          <location />
+        </el-icon>
+        <span>首页</span>
+      </el-menu-item>
+      <el-menu-item index="/creator">
+        <el-icon>
+          <icon-menu />
+        </el-icon>
+        <span>创作</span>
+      </el-menu-item>
+      <el-menu-item index="/article">
+        <el-icon>
+          <document />
+        </el-icon>
+        <span>文章</span>
+      </el-menu-item>
+      <el-menu-item index="/about">
+        <el-icon>
+          <setting />
+        </el-icon>
+        <span>关于</span>
+      </el-menu-item>
+    </el-menu>
+  </el-col>
+</template>
+
+<style lang="scss" scoped>
+.el-col {
+  width: 100%;
+}
+
+.el-menu {
+  width: 100%;
+  border: 0;
+}
+
+.el-menu-item {
+  display: flex;
+  justify-content: center;
+}
+</style>

@@ -6,7 +6,7 @@ import { router } from '@/router'
 import { useUserStore } from '@/store'
 
 // 若未授权则返回登录页
-if(!useUserStore().$state.id) router.push('/login')
+if (!useUserStore().$state.id) router.push('/login')
 
 </script>
 
@@ -41,10 +41,24 @@ if(!useUserStore().$state.id) router.push('/login')
   bottom: 0;
 }
 
-.el-container { width: 100%; height: 100%; }
+.el-container {
+  width: 100%;
+  height: 100%;
+}
 
-.el-aside { width: 20%; }
-.el-footer { background: var(--el-color-info-light-9);}
-.el-header { background: var(--el-color-primary); }
-.el-main { background: var(--el-color-info-light-9); }
+.el-aside {
+  width: 20%;
+}
+
+.el-footer {
+  background: var(--el-color-info-light-9);
+}
+
+.el-header {
+  background: var(--el-color-primary);
+}
+
+.el-main {
+  background: var(--el-color-info-light-9);
+}
 </style>
