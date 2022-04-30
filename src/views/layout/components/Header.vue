@@ -13,19 +13,16 @@ const sayHi = (): string => {
 </script>
 
 <template>
-  <el-row :gutter="18">
-    <el-col :span="6">
+  <el-row>
+    <el-col :span="6" :xs="10">
       <div class="grid-content header-title">
         <Histogram style="width: 1.5rem;height: 1.5rem;" />博客后台系统
       </div>
     </el-col>
-    <el-col :span="6">
+    <el-col :lg="13" :sm="10" :xs="0">
       <div class="grid-content" />
     </el-col>
-    <el-col :span="6">
-      <div class="grid-content" />
-    </el-col>
-    <el-col :span="6">
+    <el-col :lg="5" :sm="8" :xs="14">
       <div class="grid-content avatar">
         <span>{{ userStore.$state.login }} {{ sayHi() }}</span>
         <el-avatar :size="50" :src="userStore.$state.avatar_url" />
