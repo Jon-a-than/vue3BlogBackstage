@@ -7,11 +7,18 @@
           <el-button class="button" type="text">使用说明</el-button>
         </div>
       </template>
-
-      <div class="authorization">
-        <a href="https://github.com/login/oauth/authorize?client_id=db7547efa91798d7e956" title="GitHub授权认证"><i class="iconfont icon-GitHub"></i></a>
-      </div>
       <el-divider>第三方授权认证</el-divider>
+      <div class="authorization">
+        <a href="https://gitee.com/oauth/authorize?client_id=b85b65e2371e35ca9f97a6348ca8a92cfc3a3656c1c1d24852125066dd186d79&redirect_uri=http://localhost:3000/login/gitee&response_type=code"
+          title="Gitee授权认证"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-GITEE"></use>
+          </svg></a>
+        <a href="https://github.com/login/oauth/authorize?client_id=db7547efa91798d7e956" title="GitHub授权认证">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-logo-github"></use>
+          </svg>
+        </a>
+      </div>
     </el-card>
   </div>
 </template>
@@ -29,19 +36,10 @@
 
 .authorization {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 100%;
-
-  a {
-    color: #000;
-    text-decoration: none;
-  }
-
-  a > i {
-    font-size: 40px;
-  }
 }
 
 .card-header {
@@ -60,5 +58,10 @@
 
 .box-card {
   width: 480px;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 </style>

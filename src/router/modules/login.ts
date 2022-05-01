@@ -1,8 +1,10 @@
 export const Login = [{
   path: '/login',
-  name: 'login',
   component: () => import('@/views/login/index.vue'),
 }, {
-  path: '/login/code',
-  component: () => import('@/views/login/callback/index.vue')
+  path: '/login/github',
+  component: () => import('@/views/Login/callback/github.vue')
+}, {
+  path: '/login/gitee',
+  component: () => import('@/views/Login/callback/gitee.vue')
 }]

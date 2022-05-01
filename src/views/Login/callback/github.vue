@@ -15,7 +15,7 @@ onMounted(async () => {
   })
   const params = new URLSearchParams(location.search)
   const code = params.get('code')
-  const res = (await ApiGet('/login/token', { code })).data
+  const res = (await ApiGet('/login/github', { code })).data
   console.log(res)
 
   if (res.statusCode === 2000) {
@@ -39,3 +39,6 @@ onMounted(async () => {
 })
 
 </script>
+
+<template>
+</template>
