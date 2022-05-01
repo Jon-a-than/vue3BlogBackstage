@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import {
+  HomeFilled,
   Document,
-  Menu as IconMenu,
-  Location,
-  Setting,
+  EditPen,
+  User
 } from '@element-plus/icons-vue'
 </script>
 
@@ -12,13 +12,13 @@ import {
     <el-menu :router="true" :default-active="$route.path" class="el-menu-vertical-demo">
       <el-menu-item index="/home">
         <el-icon>
-          <location />
+          <home-filled />
         </el-icon>
         <span>首页</span>
       </el-menu-item>
       <el-menu-item index="/creator">
         <el-icon>
-          <icon-menu />
+          <edit-pen />
         </el-icon>
         <span>创作</span>
       </el-menu-item>
@@ -30,7 +30,7 @@ import {
       </el-menu-item>
       <el-menu-item index="/about">
         <el-icon>
-          <setting />
+          <user />
         </el-icon>
         <span>关于</span>
       </el-menu-item>
