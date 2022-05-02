@@ -62,6 +62,7 @@ const publish = async () => {
 
   if(article.title && article.content) {
     // TODO: 发布文章
+    // 携带token
     const publishData = await ApiPost('/article/public', article)
     console.log(publishData)
   } else ElMessage.error('文章内容,标题和文章状态不能为空')
